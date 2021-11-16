@@ -12,7 +12,11 @@ class DataProvider {
     static func makePopularPlacedata() -> [Place] {
         return[
             Place(image: UIImage(named: "selection1"), name: "London"),
-            Place(image: UIImage(named: "selection2"), name: "Rome"),
+            Place(image: UIImage(named: "selection1"), name: "Rome1"),
+            Place(image: UIImage(named: "selection1"), name: "Rome2"),
+            Place(image: UIImage(named: "selection1"), name: "Rome3"),
+            Place(image: UIImage(named: "selection1"), name: "Rome4"),
+            Place(image: UIImage(named: "selection1"), name: "Rome5"),
             Place(image: UIImage(named: "selection1"), name: "Vancouver")
         ]
     }

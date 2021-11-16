@@ -102,6 +102,7 @@ class HomeViewController : UIViewController, UICollectionViewDelegate,
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            collectionView.topAnchor.constraint(equalTo: headerImage.bottomAnchor),
 //            collectionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 2/3)
 
             tempImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -137,5 +138,12 @@ class HomeViewController : UIViewController, UICollectionViewDelegate,
         let height = collectionView.frame.height - 20
         return CGSize(width: 300, height: height)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = ImageVierViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
 }
+
 

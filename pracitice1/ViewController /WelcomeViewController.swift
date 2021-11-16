@@ -71,8 +71,6 @@ class WelcomeViewController: UIViewController{
     }()
     
     
-    
-    
     //Button-----------------
     lazy var loginButton: BaseUIButton = {
         let button = BaseUIButton()

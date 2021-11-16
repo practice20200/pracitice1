@@ -30,6 +30,7 @@
 		B377CBFA272A3B7400271DF1 /* BaseUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B377CBF9272A3B7400271DF1 /* BaseUIButton.swift */; };
 		B3A0562B273462F700ACD9B2 /* DataProviderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A0562A273462F700ACD9B2 /* DataProviderList.swift */; };
 		B3A68A542733CEBE000BD093 /* ProfileItemForNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A68A532733CEBD000BD093 /* ProfileItemForNotification.swift */; };
+		B3AEF319273CC39C0066CA20 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEF318273CC39C0066CA20 /* ImageViewerViewController.swift */; };
 		B3AF7B18273A2C13006C2379 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF7B17273A2C13006C2379 /* Place.swift */; };
 		B3AF7B1A273A3654006C2379 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF7B19273A3654006C2379 /* PlaceCell.swift */; };
 		B3CBB7C5273609270038A3DC /* BaseUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CBB7C4273609270038A3DC /* BaseUIView.swift */; };
@@ -73,6 +74,7 @@
 		B377CBF9272A3B7400271DF1 /* BaseUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIButton.swift; sourceTree = "<group>"; };
 		B3A0562A273462F700ACD9B2 /* DataProviderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderList.swift; sourceTree = "<group>"; };
 		B3A68A532733CEBD000BD093 /* ProfileItemForNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItemForNotification.swift; sourceTree = "<group>"; };
+		B3AEF318273CC39C0066CA20 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		B3AF7B17273A2C13006C2379 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		B3AF7B19273A3654006C2379 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		B3CBB7C4273609270038A3DC /* BaseUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIView.swift; sourceTree = "<group>"; };
@@ -159,14 +161,15 @@
 				B3FD925C2732360B000916A6 /* TabBarViewController.swift */,
 				B31B9E99272B60DB002592E6 /* SignUpViewController.swift */,
 				B31B9E9B272B6108002592E6 /* LoginViewController.swift */,
-				B31B9EA4272BAE2D002592E6 /* FriendsViewController.swift */,
+				B3FD9262273236B7000916A6 /* LoginFailViewController.swift */,
+				B3FD926827324AD1000916A6 /* LoginForgotController.swift */,
+				B3FD926027323668000916A6 /* HomeViewController.swift */,
 				B3327BE3272CD70800341DFB /* ProfileViewController.swift */,
 				B3FD925E27323640000916A6 /* ManageAccountViewController.swift */,
-				B3FD926027323668000916A6 /* HomeViewController.swift */,
-				B3FD9262273236B7000916A6 /* LoginFailViewController.swift */,
+				B31B9EA4272BAE2D002592E6 /* FriendsViewController.swift */,
 				B3FD9264273236E1000916A6 /* FriendsListViewController.swift */,
 				B3FD9266273236F9000916A6 /* FriendsSortedListViewController.swift */,
-				B3FD926827324AD1000916A6 /* LoginForgotController.swift */,
+				B3AEF318273CC39C0066CA20 /* ImageViewerViewController.swift */,
 			);
 			path = "ViewController ";
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				B3AF7B18273A2C13006C2379 /* Place.swift in Sources */,
 				B3A0562B273462F700ACD9B2 /* DataProviderList.swift in Sources */,
 				B31B9EA1272B94D1002592E6 /* Utils.swift in Sources */,
+				B3AEF319273CC39C0066CA20 /* ImageViewerViewController.swift in Sources */,
 				B3327BEB272CF34200341DFB /* FriendCell2.swift in Sources */,
 				B377CBF8272A3B2B00271DF1 /* VStack.swift in Sources */,
 				B31B9E9E272B8AC8002592E6 /* BaseUITextField.swift in Sources */,
