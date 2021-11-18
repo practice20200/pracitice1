@@ -26,6 +26,7 @@ class HomeViewController : UIViewController, UICollectionViewDelegate,
         cv.dataSource = self
         cv.translatesAutoresizingMaskIntoConstraints = false
         return cv
+        
     }()
     
     

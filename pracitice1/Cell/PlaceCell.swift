@@ -10,6 +10,7 @@ class PlaceCell : UICollectionViewCell{
     
     lazy var imageView = BaseUIImageView()
     
+    
     lazy var nameLabel : BaseUILabel = {
         
         let label = BaseUILabel()
