@@ -35,6 +35,11 @@
 		B3AF7B1A273A3654006C2379 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF7B19273A3654006C2379 /* PlaceCell.swift */; };
 		B3CBB7C5273609270038A3DC /* BaseUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CBB7C4273609270038A3DC /* BaseUIView.swift */; };
 		B3CBB7C72736098D0038A3DC /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CBB7C62736098D0038A3DC /* EmptyView.swift */; };
+		B3CFF1DC2745E1040087637E /* BaseUIScrollview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFF1DB2745E1040087637E /* BaseUIScrollview.swift */; };
+		B3CFF1E0274604560087637E /* ScrollableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFF1DF274604560087637E /* ScrollableViewController.swift */; };
+		B3CFF1E2274608730087637E /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFF1E1274608730087637E /* PlaceDetailViewController.swift */; };
+		B3CFF1E4274609F50087637E /* VScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFF1E3274609F50087637E /* VScrollableView.swift */; };
+		B3CFF1E6274610B10087637E /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFF1E5274610B10087637E /* PhotoCell.swift */; };
 		B3FD92582732357B000916A6 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FD92572732357B000916A6 /* AppRouter.swift */; };
 		B3FD925B273235A1000916A6 /* ProfileItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FD925A273235A1000916A6 /* ProfileItemView.swift */; };
 		B3FD925D2732360B000916A6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FD925C2732360B000916A6 /* TabBarViewController.swift */; };
@@ -79,6 +84,11 @@
 		B3AF7B19273A3654006C2379 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		B3CBB7C4273609270038A3DC /* BaseUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIView.swift; sourceTree = "<group>"; };
 		B3CBB7C62736098D0038A3DC /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		B3CFF1DB2745E1040087637E /* BaseUIScrollview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIScrollview.swift; sourceTree = "<group>"; };
+		B3CFF1DF274604560087637E /* ScrollableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableViewController.swift; sourceTree = "<group>"; };
+		B3CFF1E1274608730087637E /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
+		B3CFF1E3274609F50087637E /* VScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VScrollableView.swift; sourceTree = "<group>"; };
+		B3CFF1E5274610B10087637E /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		B3FD92572732357B000916A6 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		B3FD925A273235A1000916A6 /* ProfileItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItemView.swift; sourceTree = "<group>"; };
 		B3FD925C2732360B000916A6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +160,8 @@
 				B31B9E9D272B8AC7002592E6 /* BaseUITextField.swift */,
 				B3CBB7C4273609270038A3DC /* BaseUIView.swift */,
 				B3CBB7C62736098D0038A3DC /* EmptyView.swift */,
+				B3CFF1DB2745E1040087637E /* BaseUIScrollview.swift */,
+				B3CFF1E3274609F50087637E /* VScrollableView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -170,6 +182,8 @@
 				B3FD9264273236E1000916A6 /* FriendsListViewController.swift */,
 				B3FD9266273236F9000916A6 /* FriendsSortedListViewController.swift */,
 				B3AEF318273CC39C0066CA20 /* ImageViewerViewController.swift */,
+				B3CFF1DF274604560087637E /* ScrollableViewController.swift */,
+				B3CFF1E1274608730087637E /* PlaceDetailViewController.swift */,
 			);
 			path = "ViewController ";
 			sourceTree = "<group>";
@@ -201,6 +215,7 @@
 				B3327BEA272CF34200341DFB /* FriendCell2.swift */,
 				B3FD926A27324BA9000916A6 /* FriendRandomCell.swift */,
 				B3AF7B19273A3654006C2379 /* PlaceCell.swift */,
+				B3CFF1E5274610B10087637E /* PhotoCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -303,10 +318,12 @@
 				B3CBB7C5273609270038A3DC /* BaseUIView.swift in Sources */,
 				B3327BE9272CEDF300341DFB /* DataProvider.swift in Sources */,
 				B3327BE4272CD70800341DFB /* ProfileViewController.swift in Sources */,
+				B3CFF1E0274604560087637E /* ScrollableViewController.swift in Sources */,
 				B3FD92582732357B000916A6 /* AppRouter.swift in Sources */,
 				B3A68A542733CEBE000BD093 /* ProfileItemForNotification.swift in Sources */,
 				B3FD926127323668000916A6 /* HomeViewController.swift in Sources */,
 				B3FD926B27324BA9000916A6 /* FriendRandomCell.swift in Sources */,
+				B3CFF1E4274609F50087637E /* VScrollableView.swift in Sources */,
 				B3FD926927324AD1000916A6 /* LoginForgotController.swift in Sources */,
 				B3327BE7272CEDA800341DFB /* User.swift in Sources */,
 				B3FD9265273236E1000916A6 /* FriendsListViewController.swift in Sources */,
@@ -318,6 +335,8 @@
 				B3327BEB272CF34200341DFB /* FriendCell2.swift in Sources */,
 				B377CBF8272A3B2B00271DF1 /* VStack.swift in Sources */,
 				B31B9E9E272B8AC8002592E6 /* BaseUITextField.swift in Sources */,
+				B3CFF1E6274610B10087637E /* PhotoCell.swift in Sources */,
+				B3CFF1DC2745E1040087637E /* BaseUIScrollview.swift in Sources */,
 				B3CBB7C72736098D0038A3DC /* EmptyView.swift in Sources */,
 				B377CBF6272A3B1100271DF1 /* HStack.swift in Sources */,
 				B377CBF2272A332600271DF1 /* BaseUILabel.swift in Sources */,
@@ -328,6 +347,7 @@
 				B310BD4B272911FA005F81D5 /* BaseUIImageView.swift in Sources */,
 				B3FD925B273235A1000916A6 /* ProfileItemView.swift in Sources */,
 				B31B9E9C272B6108002592E6 /* LoginViewController.swift in Sources */,
+				B3CFF1E2274608730087637E /* PlaceDetailViewController.swift in Sources */,
 				B3AF7B1A273A3654006C2379 /* PlaceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

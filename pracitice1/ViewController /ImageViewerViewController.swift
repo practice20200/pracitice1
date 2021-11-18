@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ImageVierViewController : UIViewController, UIScrollViewDelegate{
+class ImageViewerViewController : UIViewController, UIScrollViewDelegate{
     
     var scrollView : UIScrollView!
     var imageView : UIImageView!

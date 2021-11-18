@@ -9,6 +9,17 @@ import UIKit
 
 class DataProvider {
     
+    static func photoDataProvider() -> [UIImage?] {
+        return [
+            UIImage(named: "photo1"),
+            UIImage(named: "photo2"),
+            UIImage(named: "photo3"),
+            UIImage(named: "photo1"),
+            UIImage(named: "photo2"),
+            UIImage(named: "photo3")
+        ]
+    }
+    
     static func makePopularPlacedata() -> [Place] {
         return[
             Place(image: UIImage(named: "selection1"), name: "London"),

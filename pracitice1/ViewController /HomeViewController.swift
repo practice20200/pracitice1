@@ -140,7 +140,7 @@ class HomeViewController : UIViewController, UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = ImageVierViewController()
+        let vc = PlaceDetailViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
