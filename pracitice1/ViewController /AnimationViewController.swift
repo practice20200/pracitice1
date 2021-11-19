@@ -7,6 +7,7 @@
 
 import UIKit
 import Lottie
+import Elements
 
 class AnimationViewController: UIViewController {
     

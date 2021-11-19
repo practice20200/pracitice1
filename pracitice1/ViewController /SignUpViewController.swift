@@ -1,5 +1,6 @@
 
 import UIKit
+import Elements
 
 class SignUpViewController: UIViewController {
     

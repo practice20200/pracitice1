@@ -1,6 +1,8 @@
 
 
 import UIKit
+import Elements
+
 class HomeViewController : UIViewController, UICollectionViewDelegate,
                                             UICollectionViewDataSource,
                                             UICollectionViewDelegateFlowLayout {

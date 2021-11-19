@@ -1,6 +1,8 @@
 
 
 import UIKit
+import Elements
+
 
 class ProfileViewController: UIViewController {
     

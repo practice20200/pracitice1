@@ -5,6 +5,8 @@
 //  Created by Apple New on 2021-11-17.
 //
 import UIKit
+import Elements
+
 class PhotoCell: UICollectionViewCell {
     
     lazy var imageView = BaseUIImageView()

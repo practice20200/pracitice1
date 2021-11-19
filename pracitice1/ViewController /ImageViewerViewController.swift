@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Elements
 
 class ImageViewerViewController : UIViewController, UIScrollViewDelegate{
     

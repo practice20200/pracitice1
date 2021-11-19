@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Elements
+
 class FriendCell : UITableViewCell{
     
     lazy var label: BaseUILabel = {

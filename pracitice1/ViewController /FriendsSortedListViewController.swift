@@ -1,4 +1,6 @@
 import UIKit
+import Elements
+
 class FriendsSortedListViewController : UITableViewController{
     
     let sortedFriends : [[String]] = [

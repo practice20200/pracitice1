@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Elements
+
 class PlaceCell : UICollectionViewCell{
     
     lazy var imageView = BaseUIImageView()

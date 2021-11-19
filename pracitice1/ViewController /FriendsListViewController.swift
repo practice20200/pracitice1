@@ -1,6 +1,8 @@
 
 
 import UIKit
+import Elements
+
 class FriendsListViewController: UITableViewController{
     
     let friends : [String] = [

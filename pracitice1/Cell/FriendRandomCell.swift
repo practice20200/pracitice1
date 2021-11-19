@@ -13,6 +13,7 @@
 //
 
 import UIKit
+import Elements
 
 class FriendRandomCell: UITableViewCell
 {

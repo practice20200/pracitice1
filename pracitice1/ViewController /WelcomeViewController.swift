@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Elements
 class WelcomeViewController: UIViewController{
     
     lazy var tempTestBTN : BaseUIButton = {

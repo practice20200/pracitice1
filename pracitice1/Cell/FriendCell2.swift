@@ -12,6 +12,7 @@
 //
 
 import UIKit
+import Elements
 
 class FriendCell2: UITableViewCell {
     

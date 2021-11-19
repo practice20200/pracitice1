@@ -7,7 +7,8 @@
 
 import UIKit
 //import Charts
-//
+import Elements
+
 class ChartViewController: UIViewController {
 //
 //    lazy var pieChart : PieChartView = {
