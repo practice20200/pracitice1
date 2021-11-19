@@ -181,7 +181,7 @@ class WelcomeViewController: UIViewController{
     @objc func testHandler(){
 //        let testVC = FriendsSortedListViewController()
 //        self.navigationController?.pushViewController(testVC, animated: true)
-        let testVC = LoginFailViewController()
+        let testVC = AnimationViewController()
         self.navigationController?.pushViewController(testVC, animated: true)
     }
     
