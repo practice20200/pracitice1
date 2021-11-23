@@ -23,6 +23,9 @@ class ProfileViewController: UIViewController {
             label.textColor = UIColor.black
             return label
     }()
+    
+    
+    
   
     lazy var notificationLabel : BaseUILabel = {
            let label = BaseUILabel()
@@ -48,6 +51,9 @@ class ProfileViewController: UIViewController {
     lazy var promotionalNotification = ProfileItemForNotificationView()
     lazy var friendsItem = ProfileItemView()
     lazy var logoutItem = ProfileItemView()
+    
+    
+    
     
     
     lazy var profileMenu : VStack = {
@@ -127,6 +133,9 @@ class ProfileViewController: UIViewController {
         friendsItem.button.addTarget(self, action: #selector(friendsTapped), for: .touchUpInside)
         manageProfilebutton.button.addTarget(self, action: #selector(accountTapped), for: .touchUpInside)
     }
+    
+    
+    
     
     @objc func accountTapped() {
         let manageAccountVC = ManageAccountViewController()

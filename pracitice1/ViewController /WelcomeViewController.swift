@@ -9,52 +9,31 @@ import UIKit
 import Elements
 class WelcomeViewController: UIViewController{
     
-    lazy var tempTestBTN : BaseUIButton = {
-        let button = BaseUIButton()
-        button.setTitle("TEST", for: .normal)
-        button.setTitleColor(UIColor.black, for: .normal)
-        button.addTarget(self, action: #selector(testHandler), for: .touchUpInside)
-        return button
-    }()
-    
-    
     
     //imageView
     lazy var imageView : BaseUIImageView = {
         
         let iv = BaseUIImageView()
         iv.image = UIImage(named: "logo")
-//        iv.translatesAutoresizingMaskIntoConstraints = false
         iv.backgroundColor = UIColor.white
         iv.widthAnchor.constraint(equalToConstant:375).isActive = true
         iv.heightAnchor.constraint(equalToConstant: 250).isActive = true
         return iv
         
     }()
-    
-//    lazy var b : BaseUIButton = {
-//        let button = BaseUIButton()
-//        button.setImage("add", for: .normal)
-//        return butto
-//    }
-//    
-//    
-    
+
     //centerLables---------------
     lazy var titleLabel: BaseUILabel = {
         let label = BaseUILabel()
         label.text = "Plan your trips"
         label.font = UIFont.preferredFont(forTextStyle: .title1)
                 label.font = UIFont.systemFont(ofSize: 30)
-//        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
         
     lazy var descriptionLabel: BaseUILabel = {
         let label = BaseUILabel()
-//        label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "For the best trip, simply specify your plan."
-//        label.font = UIFont.systemFont(ofSize: 60)
         label.textColor = UIColor(hexString: "#B3B5B9")
         label.numberOfLines = 2
         label.textAlignment = .center
@@ -66,7 +45,6 @@ class WelcomeViewController: UIViewController{
         stack.spacing = 20
         stack.addArrangedSubview(titleLabel)
         stack.addArrangedSubview(descriptionLabel)
-//        stack.widthAnchor.constraint(equalToConstant: 300).isActive = true
         stack.alignment = .center
         return stack
     }()
@@ -98,15 +76,55 @@ class WelcomeViewController: UIViewController{
         return button
     }()
     
+    //---------TEMPOLARY---------
+                        lazy var animationTest : BaseUIButton = {
+                            let button = BaseUIButton()
+                            button.setTitle("anime", for: .normal)
+                            button.setTitleColor(UIColor.black, for: .normal)
+                            button.addTarget(self, action: #selector(animationTestHandler), for: .touchUpInside)
+                            return button
+                        }()
+    
+                        lazy var chartTest : BaseUIButton = {
+                            let button = BaseUIButton()
+                            button.setTitle("chart", for: .normal)
+                            button.setTitleColor(UIColor.black, for: .normal)
+                            button.addTarget(self, action: #selector(chartTestHandler), for: .touchUpInside)
+                            return button
+                        }()
+    
+                        lazy var friendsSortedListTest : BaseUIButton = {
+                            let button = BaseUIButton()
+                            button.setTitle("frie_Sorted", for: .normal)
+                            button.setTitleColor(UIColor.black, for: .normal)
+                            button.addTarget(self, action: #selector(friendsSortedListTestHandler), for: .touchUpInside)
+                            return button
+                        }()
+    
+                        lazy var tempStack : HStack = {
+                            let stack = HStack()
+                            stack.addArrangedSubview(animationTest)
+                            stack.addArrangedSubview(chartTest)
+                            stack.addArrangedSubview(friendsSortedListTest)
+                            stack.spacing = 5
+                            stack.distribution = .equalCentering
+                            return stack
+                        }()
+    //---------TEMPOLARY---------
+    
+    
+    
     lazy var buttonStack : VStack = {
        let stack = VStack()
         stack.spacing = 20
         stack.addArrangedSubview(loginButton)
         stack.addArrangedSubview(signUpButton)
-        stack.addArrangedSubview(tempTestBTN)
+        stack.addArrangedSubview(tempStack)
         stack.widthAnchor.constraint(equalToConstant: 300).isActive = true
         return stack
     }()
+    
+    
     
     
     //---------------
@@ -122,12 +140,11 @@ class WelcomeViewController: UIViewController{
     
     
     
-    
+//----whole Layout--
     lazy var contentStack: VStack = {
         let stack = VStack()
         stack.addArrangedSubview(imageView)
         stack.addArrangedSubview(latterPart)
-//        stack.addArrangedSubview(buttonStack)
         stack.spacing = 100
         stack.alignment = .center
         stack.isLayoutMarginsRelativeArrangement = true
@@ -135,13 +152,16 @@ class WelcomeViewController: UIViewController{
         return stack
     }()
     
+    
+    
+    
     override func viewDidLoad(){
-        
-        
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         title = "Welcome"
+
         
+//----------------------------------------------------
 //        view.addSubview(contentStack)
 //        NSLayoutConstraint.activate([
 //            contentStack.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -161,30 +181,37 @@ class WelcomeViewController: UIViewController{
 //            imageView.heightAnchor.constraint(equalToConstant: 200)
 //
 //        ])
+//----------------------------------------------------
+
         
         view.addSubview(contentStack)
         NSLayoutConstraint.activate([
 
-            labelsStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            labelsStack.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-//
+            contentStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            contentStack.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+
         ])
-//
-//        view.addSubview(buttonStack)
-//        NSLayoutConstraint.activate([
-//
-//            buttonStack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
-//            buttonStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//
-//        ])
+
     }
+    //----tempolary-----
+                        @objc func animationTestHandler(){
+                            let testVC = HomeViewController()
+                            self.navigationController?.pushViewController(testVC, animated: true)
+                        }
+                        
+                        @objc func chartTestHandler(){
+                            let testVC = ChartViewController()
+                            self.navigationController?.pushViewController(testVC, animated: true)
+                        }
+                        
+                        @objc func friendsSortedListTestHandler(){
+                            let testVC = FriendsSortedListViewController()
+                            self.navigationController?.pushViewController(testVC, animated: true)
+                        }
+    //----tempolary-----//
     
-    @objc func testHandler(){
-//        let testVC = FriendsSortedListViewController()
-//        self.navigationController?.pushViewController(testVC, animated: true)
-        let testVC = AnimationViewController()
-        self.navigationController?.pushViewController(testVC, animated: true)
-    }
+    
+    
     
     @objc func signUpTagged(){
         print("signup: tapped")

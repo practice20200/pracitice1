@@ -3,6 +3,7 @@ import Elements
 
 class FriendsSortedListViewController : UITableViewController{
     
+    //Data(Will be transferred to DataProvider later)
     let sortedFriends : [[String]] = [
         ["Alexander Valley",
          "Anderson Valley",
@@ -23,14 +24,20 @@ class FriendsSortedListViewController : UITableViewController{
         ["nik Valley"]
     ]
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         title = "Friends"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellidentifier")
-        
     }
 
+    
+    
+    
+    //datasource and delegation
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sortedFriends.count
     }
@@ -38,8 +45,6 @@ class FriendsSortedListViewController : UITableViewController{
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sortedFriends[section].count
     }
-
-
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "cellidentifier")
@@ -51,6 +56,9 @@ class FriendsSortedListViewController : UITableViewController{
         return cell!
     }
 
+    
+    
+    //------tablecelllayout
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "\(section)"
     }

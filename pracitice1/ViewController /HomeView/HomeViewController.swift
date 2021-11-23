@@ -7,37 +7,19 @@ class HomeViewController : UIViewController, UICollectionViewDelegate,
                                             UICollectionViewDataSource,
                                             UICollectionViewDelegateFlowLayout {
     
-    lazy var tempImage : BaseUIImageView = {
-        let iv = BaseUIImageView()
-        iv.image = UIImage(named: "select1")
-        return iv
-    }()
     
-    
-    
-    let data = DataProvider.makePopularPlacedata()
-    
-    
-    lazy var collectionView: UICollectionView = {
-        
-        let viewLayout =  UICollectionViewFlowLayout()
-        viewLayout.scrollDirection = .horizontal
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
-        cv.backgroundColor = .white
-        cv.delegate = self
-        cv.dataSource = self
-        cv.translatesAutoresizingMaskIntoConstraints = false
-        return cv
-        
-    }()
-    
-    
+    //----headerBackgroundImage
     lazy var headerImage : BaseUIImageView = {
         let iv = BaseUIImageView()
         iv.image = UIImage(named: "headerImage")
+        iv.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return iv
     }()
     
+    
+    
+    
+    //------UpperTitlesStack
     lazy var titleLabel : BaseUILabel = {
         let label = BaseUILabel()
         label.text = "Vancouver"
@@ -75,6 +57,32 @@ class HomeViewController : UIViewController, UICollectionViewDelegate,
         return stack
     }()
     
+    
+    
+    
+    
+    //------bottomCollectionImage
+    lazy var tempImage : BaseUIImageView = {
+        let iv = BaseUIImageView()
+        iv.image = UIImage(named: "select1")
+        return iv
+    }()
+    
+    let data = DataProvider.makePopularPlacedata()
+    
+    lazy var collectionView: UICollectionView = {
+        
+        let viewLayout =  UICollectionViewFlowLayout()
+        viewLayout.scrollDirection = .horizontal
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
+        cv.backgroundColor = .white
+        cv.delegate = self
+        cv.dataSource = self
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        return cv
+        
+    }()
+    
     lazy var selectionsLabel : BaseUILabel = {
         let title = BaseUILabel()
         title.text = "Popular Places"
@@ -82,6 +90,11 @@ class HomeViewController : UIViewController, UICollectionViewDelegate,
         title.font = UIFont.preferredFont(forTextStyle: .title1)
         return title
     }()
+    
+    
+    
+    
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -122,9 +135,14 @@ class HomeViewController : UIViewController, UICollectionViewDelegate,
         collectionView.register(PlaceCell.self, forCellWithReuseIdentifier: "cell")
         
     }
+    
+    
+    
+    //------delegation and datasource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PlaceCell
         
@@ -134,14 +152,21 @@ class HomeViewController : UIViewController, UICollectionViewDelegate,
         return cell
     }
     
+    
+    
+    //------collectionViewLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 1
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let height = collectionView.frame.height - 20
         return CGSize(width: 300, height: height)
     }
     
+    
+    
+    //----Action
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = PlaceDetailViewController()
         self.navigationController?.pushViewController(vc, animated: true)

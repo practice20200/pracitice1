@@ -9,8 +9,6 @@ import UIKit
 class DataProviderList {
     
 
-    
-    
     static func makeDataForList() -> [(String, [UserForList])] {
         
         var aSection: [UserForList] = []

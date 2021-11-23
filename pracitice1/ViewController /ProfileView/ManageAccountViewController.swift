@@ -5,24 +5,31 @@ import Elements
 
 class ManageAccountViewController : UIViewController {
     
+    //----profileImage
     lazy var image : BaseUIImageView = {
         let iv = BaseUIImageView()
         iv.image = UIImage(named: "profilePic1")
-        iv.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        iv.heightAnchor.constraint(equalToConstant: 160).isActive = true
+        iv.widthAnchor.constraint(equalToConstant: 160).isActive = true
         return iv
     }()
     
+    
+    
+    
+    //------Stack
     lazy var userNameLabel : BaseUILabel = {
         let label = BaseUILabel()
         label.text = "User Name"
-        label.backgroundColor = UIColor.gray
+        label.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        label.backgroundColor = UIColor(hexString: "#F6F6F6")
         return label
     }()
     
     lazy var userActualNameLabel : BaseUILabel = {
         let label = BaseUILabel()
         label.text = "Jecica zed"
-//        label.backgroundColor = UIColor.gray
+        label.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return label
     }()
 
@@ -30,7 +37,8 @@ class ManageAccountViewController : UIViewController {
     lazy var PhoneNumberLabel : BaseUILabel = {
         let label = BaseUILabel()
         label.text = "Phone Number"
-        label.backgroundColor = UIColor.gray
+        label.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        label.backgroundColor = UIColor(hexString: "#F6F6F6")
         return label
     }()
     
@@ -38,13 +46,14 @@ class ManageAccountViewController : UIViewController {
     lazy var PhoneAcutualNumberLabel : BaseUILabel = {
         let label = BaseUILabel()
         label.text = "+123456789"
-//        label.backgroundColor = UIColor.gray
+        label.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return label
     }()
     
     lazy var LocationLabel : BaseUILabel = {
         let label = BaseUILabel()
         label.text = "Location"
+        label.heightAnchor.constraint(equalToConstant: 50).isActive = true
         label.backgroundColor = UIColor(hexString: "#F6F6F6")
         return label
     }()
@@ -52,7 +61,7 @@ class ManageAccountViewController : UIViewController {
     lazy var ActualLocationLabel : BaseUILabel = {
         let label = BaseUILabel()
         label.text = "Canada"
-//        label.backgroundColor = UIColor.gray
+        label.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return label
     }()
     
@@ -70,14 +79,17 @@ class ManageAccountViewController : UIViewController {
         return tableStack
     }()
     
-//    lazy var stack : VStack = {
-//
-//        let stack =  VStack()
-//        stack.addArrangedSubview(image)
-//        stack.addArrangedSubview(tableStack)
-//        stack.alignment = .center
-//        return stack
-//    }()
+    lazy var stack : VStack = {
+        let stack =  VStack()
+        stack.addArrangedSubview(image)
+        stack.addArrangedSubview(tableStack)
+        stack.spacing = 50
+        stack.alignment = .center
+        return stack
+    }()
+    
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

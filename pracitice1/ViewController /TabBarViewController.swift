@@ -27,8 +27,6 @@ class TabBarViewController: UITabBarController{
         
         viewControllers = [homeVC, friendVC, profileVC]
         
-
-        
     }
     
 }

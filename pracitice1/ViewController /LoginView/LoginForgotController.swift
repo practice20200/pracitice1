@@ -55,6 +55,16 @@ class LoginForgotViewController : UITableViewController{
         return title
     }()
     
+    lazy var resetEmailTF : BaseUITextField = {
+        let email = BaseUITextField()
+        email.placeholder = "ex) Jesica_zed @gmail.com"
+        email.backgroundColor = UIColor.white
+        email.layer.shadowColor = UIColor.lightGray.cgColor
+        email.layer.shadowOpacity = 0.5
+        return email
+    }()
+
+    
     lazy var titleResetTF : VStack = {
         let stack = VStack()
         stack.addArrangedSubview(titleTF)
@@ -66,7 +76,7 @@ class LoginForgotViewController : UITableViewController{
     
     
     
-    
+//----------------------------------------------------
     //---textFiled---
 //    lazy var messageLL : BaseUILabel = {
 //        let title = BaseUILabel()
@@ -75,14 +85,14 @@ class LoginForgotViewController : UITableViewController{
 //        return title
 //    }()
     
-    lazy var resetEmailTF : BaseUITextField = {
-        let email = BaseUITextField()
-        email.placeholder = "Jesica_zed @gmail.com"
-        email.layer.shadowColor = UIColor.lightGray.cgColor
-        email.layer.shadowOpacity = 0.5
-        return email
-    }()
-    
+//    lazy var resetEmailTF : BaseUITextField = {
+//        let email = BaseUITextField()
+//        email.placeholder = "Jesica_zed @gmail.com"
+//        email.layer.shadowColor = UIColor.lightGray.cgColor
+//        email.layer.shadowOpacity = 0.5
+//        return email
+//    }()
+//    
 //    lazy var inputEmailTF : VStack = {
 //        let stack = VStack()
 //        stack.addArrangedSubview(messageLL)
@@ -90,10 +100,9 @@ class LoginForgotViewController : UITableViewController{
 //        stack.spacing = 20
 //        return stack
 //    }()
-    
-    
-    
-    
+//----------------------------------------------------
+
+
     
     //---resetPassword---
     lazy var button : BaseUIButton = {
@@ -143,20 +152,47 @@ class LoginForgotViewController : UITableViewController{
         ])
     }
     
+    
     @objc func resetButtonTapped(){
-        let alertViewController = UIAlertController(title: "Request sent", message: "Forgot password request successfully sent", preferredStyle: .alert)
         
-//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        let OKAction = UIAlertAction(title: "OK", style: .default){ action in LocalDataManager.logout()
-            let WelcomeVC = WelcomeViewController()
-            self.navigationController?.pushViewController(WelcomeVC, animated: true)
-//            AppRouter.navigate(to: WelcomeVC)
+        let validEmail = "1234@yahoo.com"
+        if resetEmailTF.text == validEmail{
+            let alertViewController = UIAlertController(title: "Request sent", message: "Forgot password request successfully sent", preferredStyle: .alert)
+            
+            let OKAction = UIAlertAction(title: "OK", style: .default){
+                action in LocalDataManager.logout()
+                let WelcomeVC = WelcomeViewController()
+                self.navigationController?.pushViewController(WelcomeVC, animated: true)
+            }
+            
+            alertViewController.addAction(OKAction)
+            
+            self.navigationController?.present(alertViewController, animated: true, completion: nil)
+        }else{
+            print("Something went wrong")
         }
-        
-        alertViewController.addAction(OKAction)
-        
-        self.navigationController?.present(alertViewController, animated: true, completion: nil)
     }
+
+    
+    
+//----------------------------------------------------
+//    @objc func resetButtonTapped(){
+//        let alertViewController = UIAlertController(title: "Request sent", message: "Forgot password request successfully sent", preferredStyle: .alert)
+//
+////        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//
+//        let OKAction = UIAlertAction(title: "OK", style: .default){ action in LocalDataManager.logout()
+//            let WelcomeVC = WelcomeViewController()
+//            self.navigationController?.pushViewController(WelcomeVC, animated: true)
+////            AppRouter.navigate(to: WelcomeVC)
+//        }
+//
+//        alertViewController.addAction(OKAction)
+//
+//        self.navigationController?.present(alertViewController, animated: true, completion: nil)
+//    }
+//----------------------------------------------------
+
+
     
 }

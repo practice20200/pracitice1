@@ -5,6 +5,7 @@ import Elements
 
 class FriendsListViewController: UITableViewController{
     
+    //Data(Will be transferred to DataProvider later)
     let friends : [String] = [
         "Alexander Valley",
         "Anderson Valley",
@@ -25,16 +26,19 @@ class FriendsListViewController: UITableViewController{
     ]
 
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         title = "Friends"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellidentifier")
-        
-        
-      
     }
 
+    
+    
+    
+    //-----delegation and datasource
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

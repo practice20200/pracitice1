@@ -4,6 +4,7 @@ import Elements
 
 class SignUpViewController: UIViewController {
     
+    //logostack-------
     lazy var logo: BaseUIImageView = {
         let iv = BaseUIImageView()
         iv.image = UIImage(named: "appLogo")
@@ -26,6 +27,10 @@ class SignUpViewController: UIViewController {
         return stack
     }()
     
+    
+    
+    
+    //-------signUpStack
     lazy var usernameTF: BaseUITextField = {
         let tf = BaseUITextField()
         tf.placeholder = "User name"
@@ -83,6 +88,10 @@ class SignUpViewController: UIViewController {
         return stack
     }()
     
+    
+    
+    
+    //--------ButtonStack
     lazy var contentStack: VStack = {
         let stack = VStack()
         stack.addArrangedSubview(logoStack)
@@ -93,6 +102,9 @@ class SignUpViewController: UIViewController {
         
         return stack
     }()
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

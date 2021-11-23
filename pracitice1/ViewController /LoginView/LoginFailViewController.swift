@@ -3,28 +3,21 @@
 import UIKit
 import Elements
 
-class LoginViewController: UIViewController {
-    
+class LoginFailViewController : UITableViewController{
+   
+    //--logo---
     lazy var logo: BaseUIImageView = {
         let iv = BaseUIImageView()
         iv.image = UIImage(named: "appLogo")
         return iv
     }()
-
-    
-//    lazy var tempAccountBtn : BaseUIButton = {
-//        let button = BaseUIButton()
-//        button.layer.cornerRadius = 25
-//        button.setTitle("temp button that moves to  an account page", for: .normal)
-//        button.addTarget(self, action: #selector(accountHandler), for: .touchUpInside)
-//        return button
-//    }()
     
     lazy var titleLabel: BaseUILabel = {
         let label = BaseUILabel()
         label.text = "Karen Trip"
         label.textColor = UIColor(hexString: "#42588B")
         label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+//        return label
         return label
     }()
     
@@ -32,9 +25,13 @@ class LoginViewController: UIViewController {
         let stack = VStack()
         stack.addArrangedSubview(logo)
         stack.addArrangedSubview(titleLabel)
+        stack.alignment = .center
         stack.spacing = 20
         return stack
     }()
+    
+    //-----------
+    //---email,password,message,loginbutton---
     
     lazy var emailTF: BaseUITextField = {
         let tf = BaseUITextField()
@@ -58,19 +55,12 @@ class LoginViewController: UIViewController {
         return tf
     }()
     
-    lazy var forgotPasswordBtn : BaseUIButton = {
-        let button = BaseUIButton()
-        button.setTitle("Forgot Password?", for: .normal)
-        button.setTitleColor(UIColor.red, for: .normal)
-        button.addTarget(self, action: #selector(forgotPWHandler), for: .touchUpInside)
-        return button
-    }()
-    
-    lazy var fogotStack: VStack = {
-        let stack = VStack()
-        stack.addArrangedSubview(forgotPasswordBtn)
-        stack.alignment = .trailing
-        return stack
+    lazy var message : BaseUILabel = {
+        let message = BaseUILabel()
+        message.text = "Wrong Password, please try again"
+        message.textColor = UIColor.red
+        message.font = UIFont.systemFont(ofSize: 10)
+        return message
     }()
     
     lazy var loginButton: BaseUIButton = {
@@ -80,7 +70,7 @@ class LoginViewController: UIViewController {
         button.layer.shadowOpacity = 1.0
         button.layer.shadowColor = UIColor.lightGray.cgColor
         button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        button.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 300).isActive = true
         button.layer.cornerRadius = 25
         button.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
         button.addTarget(self, action: #selector(loginHandler), for: .touchUpInside)
@@ -91,12 +81,16 @@ class LoginViewController: UIViewController {
         let stack = VStack()
         stack.addArrangedSubview(emailTF)
         stack.addArrangedSubview(passTF)
-        stack.addArrangedSubview(fogotStack)
+        stack.addArrangedSubview(message)
         stack.addArrangedSubview(loginButton)
         stack.spacing = 20
         stack.widthAnchor.constraint(equalToConstant: 300).isActive = true
         return stack
     }()
+ 
+    //----------
+    //---facebook,twitter---
+
     
     lazy var facebookButton: BaseUIButton = {
         let button = BaseUIButton()
@@ -136,92 +130,119 @@ class LoginViewController: UIViewController {
     
     
     
-    lazy var messageLabel : BaseUILabel = {
+    
+    //---------
+    //---signupstack---
+    
+    lazy var messageL : BaseUILabel = {
         let message = BaseUILabel()
-        message.text = "Don’t have an account?"
+        message.text = "Don’t have an account ?"
+        message.textColor = UIColor.gray
         return message
     }()
     
-    lazy var signUpBtn : BaseUIButton = {
+    lazy var signUpButton : BaseUIButton = {
         let button = BaseUIButton()
-        button.setTitle("Sign up" , for: .normal)
+        button.setTitle("Sign up", for: .normal)
         button.setTitleColor(UIColor.blue, for: .normal)
         button.addTarget(self, action: #selector(signUpHandler), for: .touchUpInside)
         return button
     }()
     
-    lazy var signUPHStack : HStack = {
+    lazy var stackSignUP : HStack = {
         let stack = HStack()
-        stack.addArrangedSubview(messageLabel)
-        stack.addArrangedSubview(signUpBtn)
+        stack.addArrangedSubview(messageL)
+        stack.addArrangedSubview(signUpButton)
         stack.spacing = 10
         return stack
     }()
     
     
     
+    
+    //----------
+    //---overallLayut---
+    
     lazy var contentStack: VStack = {
         let stack = VStack()
         stack.addArrangedSubview(logoStack)
         stack.addArrangedSubview(textFieldStack)
         stack.addArrangedSubview(socialNetworks)
-        stack.addArrangedSubview(signUPHStack)
+        stack.addArrangedSubview(stackSignUP)
         stack.spacing = 50
         stack.alignment = .center
+        
         return stack
     }()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor(hexString: "#E5E5E5")
         
+//----------------------------------------------------
+//        view.addSubview(logoStack)
+//        NSLayoutConstraint.activate([
+////            logoStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            logoStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 120),
+//            logoStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -120),
+//            logoStack.topAnchor.constraint(equalTo: view.topAnchor, constant: 30),
+//            logoStack.heightAnchor.constraint(equalToConstant: 180)
+//        ])
+//----------------------------------------------------
+
         view.addSubview(contentStack)
-        
         NSLayoutConstraint.activate([
-            contentStack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30),
-            contentStack.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-//            contentStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            contentStack.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
 //            contentStack.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-//            contentStack.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
+            contentStack.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
+//
+        
     }
     
-//@objc func loginHandler() {
-       // let profileVC = ProfileViewController()
-//self.navigationController?.pushViewController(profileVC, animated: true)
-       // let vc = TabBarViewController()
-        //AppRouter.navigate(to: vc)
-        //let vc = LoginFailViewController()
-        ////self.navigationController?.pushViewController(vc, animated: true)
-    //}
-    
-//    @objc func accountHandler() {
-//        let tempAcccountVC = ProfileViewController()
-//        self.navigationController?.pushViewController(tempAcccountVC, animated: true)
-//    }
-    
-    @objc func forgotPWHandler(){
-        let forgotPWVC = LoginForgotViewController()
-        self.navigationController?.pushViewController(forgotPWVC, animated: true)
+    var loginCount = 0
+    var totalLoginFailCount = 0
+    @objc func loginHandler() {
+
+        let validEmail = "1234@yahoo.com"
+        let validPassword = "1234"
+        
+        var inputEmail = emailTF.text
+        var inputPassword = passTF.text
+        
+        if inputEmail != validEmail || inputPassword != validPassword {
+            inputEmail = ""
+            inputPassword = ""
+            loginCount += 1
+            print("While")
+            if loginCount > 4 {
+                print("if")
+                let alertViewController = UIAlertController(title: "Inccorect", message: "Your email or password is wrong", preferredStyle: .alert)
+                
+                let resetAction = UIAlertAction(title: "Reset", style: .default){ action in LocalDataManager.logout()
+                    let VC = LoginForgotViewController()
+                    self.navigationController?.pushViewController(VC, animated: true)
+                }
+                
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                
+                alertViewController.addAction(resetAction)
+                alertViewController.addAction(cancelAction)
+                
+                self.navigationController?.present(alertViewController, animated: true, completion: nil)
+            }
+        }else{
+            let valificationSuccess = HomeViewController()
+            self.navigationController?.pushViewController(valificationSuccess, animated: true)
+        }
     }
     
     @objc func signUpHandler(){
-        let signUPVC = SignUpViewController()
-        self.navigationController?.pushViewController(signUPVC, animated: true)
+        let signUpVC = SignUpViewController()
+        self.navigationController?.pushViewController(signUpVC, animated: true)
+        
     }
-    
-    @objc func loginHandler() {
-        if !(emailTF.text?.isEmpty ?? true) &&
-                !(passTF.text?.isEmpty ?? true) {
-            
-            LocalDataManager.isOnboarded(flag: true)
-            LocalDataManager.setEmail(email: emailTF.text ?? "")
-            
-            let vc = TabBarViewController()
-            AppRouter.navigate(to: vc)
-            
-        }
-    }
-
 }

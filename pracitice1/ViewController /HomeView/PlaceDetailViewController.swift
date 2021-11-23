@@ -13,28 +13,20 @@ class PlaceDetailViewController: UIViewController,
                                 UICollectionViewDataSource,
                                 UICollectionViewDelegateFlowLayout {
     
-    let data = DataProvider.photoDataProvider()
-    
-    lazy var collectionView: UICollectionView = {
-        let viewLayout = UICollectionViewFlowLayout()
-        viewLayout.scrollDirection = .horizontal
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
-        cv.backgroundColor = .white
-        cv.delegate = self
-        cv.dataSource = self
-        cv.translatesAutoresizingMaskIntoConstraints = false
-        cv.showsHorizontalScrollIndicator = false
-        cv.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        return cv
-    }()
-    
+
+    //------topCoverImage
     lazy var coverImageView: BaseUIImageView = {
         let iv = BaseUIImageView()
         iv.image = UIImage(named: "popularPlace")
-        iv.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        iv.heightAnchor.constraint(equalToConstant: 200).isActive = true
         return iv
     }()
     
+    
+    
+    
+    
+    //-----middleStack
     lazy var titleLabel: BaseUILabel = {
         let label = BaseUILabel()
         label.text = "Roberts Creek Park Tiny House"
@@ -96,7 +88,32 @@ class PlaceDetailViewController: UIViewController,
         return stack
     }()
     
+    
+    
+    
+    
+    //-----collectionImage
+    let data = DataProvider.photoDataProvider()
+    
+    lazy var collectionView: UICollectionView = {
+        let viewLayout = UICollectionViewFlowLayout()
+        viewLayout.scrollDirection = .horizontal
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
+        cv.backgroundColor = .white
+        cv.delegate = self
+        cv.dataSource = self
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        cv.showsHorizontalScrollIndicator = false
+        cv.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        return cv
+    }()
+    
+    
+
     lazy var scrollView = VScrollableView(content: stack)
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,6 +133,9 @@ class PlaceDetailViewController: UIViewController,
         collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: "cell")
     }
     
+    
+    
+    //------delegation and datasource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
     }
@@ -126,17 +146,23 @@ class PlaceDetailViewController: UIViewController,
         return cell
     }
     
+    
+    
+    //CollectionView Layout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 1
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 80, height: 80)
     }
     
+    
+    
+    //---Action
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = ImageViewerViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
 }

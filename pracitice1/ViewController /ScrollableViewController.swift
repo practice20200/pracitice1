@@ -33,7 +33,6 @@ class ScrollableView: BaseUIScrollView {
 
     private func _addView(_ view: UIView) {
         contentWrapper.addSubview(view)
-
         NSLayoutConstraint.activate([
             view.topAnchor.constraint(equalTo: contentWrapper.topAnchor),
             view.leadingAnchor.constraint(equalTo: contentWrapper.leadingAnchor),
