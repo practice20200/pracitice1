@@ -29,12 +29,14 @@ class ImageViewerViewController : UIViewController, UIScrollViewDelegate{
         view.addSubview(scrollView)
         
         scrollView.delegate = self
-        //        scrollView.minimumZoomScale = 0.1
-        //        scrollView.maximumZoomScale = 4.0
-        //        scrollView.zoomScale = 1.0
+        scrollView.minimumZoomScale = 0.1
+        scrollView.maximumZoomScale = 4.0
+        scrollView.zoomScale = 3.0
         
         setZoomScale()
         setupGestureRecognizer()
+        
+
 
     }
     

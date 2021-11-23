@@ -195,7 +195,7 @@ class WelcomeViewController: UIViewController{
     }
     //----tempolary-----
                         @objc func animationTestHandler(){
-                            let testVC = HomeViewController()
+                            let testVC = AnimationViewController()
                             self.navigationController?.pushViewController(testVC, animated: true)
                         }
                         
