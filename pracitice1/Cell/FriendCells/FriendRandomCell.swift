@@ -15,22 +15,27 @@
 import UIKit
 import Elements
 
-class FriendRandomCell: UITableViewCell
-{
+class FriendRandomCell: UITableViewCell{
+
     lazy var labelA_Z : BaseUILabel = {
         let label = BaseUILabel()
         label.textColor = UIColor.red
         return label
     }()
     
+    
+    
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setUPView()}
     
-    setUPView()}
-    
-    required init?(coder: NSCoder) {
+        required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
+    
+    
+    
     
     func setUPView(){
         contentView.addSubview(labelA_Z)

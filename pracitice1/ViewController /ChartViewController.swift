@@ -30,16 +30,8 @@ class ChartViewController: UIViewController {
             pieChart.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
 
-//        let vancouverPopulation = PieChartDataEntry(value: 70.2, label: "Vancouver")
-//        let torontoPopulation = PieChartDataEntry(value: 68.5, label: "Toront")
-//        let set = PieChartDataSet(entries: [vancouverPopulation,torontoPopulation], label: "Canada Population")
-//
-//        set.colors = ChartColorTemplates.liberty() + ChartColorTemplates.colorful()
-//
-//        let pieChartData = PieChartData(dataSets: set)
-//        pieChart.data = pieChartData
+                                                
 
-        
         
         //-----chartData(Quated: URL)
         let trump = PieChartDataEntry(value: 70.3, label: "TRUMP")
@@ -55,6 +47,17 @@ class ChartViewController: UIViewController {
 
         let pieChartData = PieChartData(dataSet: set)
         pieChart.data = pieChartData
+        
+                                                    //-----codes in the lecuture that didn't work--------------------
+                                                    //        let vancouverPopulation = PieChartDataEntry(value: 70.2, label: "Vancouver")
+                                                    //        let torontoPopulation = PieChartDataEntry(value: 68.5, label: "Toront")
+                                                    //        let set = PieChartDataSet(entries: [vancouverPopulation,torontoPopulation], label: "Canada Population")
+                                                    //
+                                                    //        set.colors = ChartColorTemplates.liberty() + ChartColorTemplates.colorful()
+                                                    //
+                                                    //        let pieChartData = PieChartData(dataSets: set)
+                                                    //        pieChart.data = pieChartData
+                                                    //-----codes in the lecuture that didn't work---------------------
         
     }
 

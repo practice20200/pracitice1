@@ -221,7 +221,7 @@ class LoginViewController: UIViewController {
         if inputEmail == validEmail{
             
             if inputPassword == validPassword{
-                let vc = HomeViewController()
+                let vc = TabBarViewController()
                 self.navigationController?.pushViewController(vc, animated: true)
             }else{
                 let vc = LoginFailViewController()

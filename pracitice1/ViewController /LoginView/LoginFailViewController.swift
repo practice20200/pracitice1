@@ -235,7 +235,7 @@ class LoginFailViewController : UITableViewController{
                 self.navigationController?.present(alertViewController, animated: true, completion: nil)
             }
         }else{
-            let valificationSuccess = HomeViewController()
+            let valificationSuccess = TabBarViewController()
             self.navigationController?.pushViewController(valificationSuccess, animated: true)
         }
     }

@@ -217,12 +217,20 @@
 			path = HomeView;
 			sourceTree = "<group>";
 		};
-		B3FD925527323508000916A6 /* Cell */ = {
+		B3BB2980274CB413007EA337 /* FriendCells */ = {
 			isa = PBXGroup;
 			children = (
 				B31B9EA6272BAEF9002592E6 /* FriendCell.swift */,
 				B3327BEA272CF34200341DFB /* FriendCell2.swift */,
 				B3FD926A27324BA9000916A6 /* FriendRandomCell.swift */,
+			);
+			path = FriendCells;
+			sourceTree = "<group>";
+		};
+		B3FD925527323508000916A6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B3BB2980274CB413007EA337 /* FriendCells */,
 				B3AF7B19273A3654006C2379 /* PlaceCell.swift */,
 				B3CFF1E5274610B10087637E /* PhotoCell.swift */,
 			);

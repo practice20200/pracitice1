@@ -11,10 +11,18 @@ class PhotoCell: UICollectionViewCell {
     
     lazy var imageView = BaseUIImageView()
     
+    
+    
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
+    
+    
+    
+    
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)

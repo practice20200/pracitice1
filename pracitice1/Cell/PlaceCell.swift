@@ -22,6 +22,10 @@ class PlaceCell : UICollectionViewCell{
         
     }()
     
+    
+    
+    
+
     override init(frame: CGRect) {
         super.init(frame:frame)
         setUpView()
@@ -31,6 +35,10 @@ class PlaceCell : UICollectionViewCell{
         super.init(coder: coder)
         setUpView()
     }
+    
+    
+    
+    
     
     func setUpView(){
         contentView.addSubview(imageView)

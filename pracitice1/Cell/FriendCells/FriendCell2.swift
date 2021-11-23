@@ -16,6 +16,7 @@ import Elements
 
 class FriendCell2: UITableViewCell {
     
+    //-----profileImage
     lazy var avatarView: BaseUIImageView = {
         let iv = BaseUIImageView()
         iv.heightAnchor.constraint(equalToConstant: 60).isActive = true
@@ -24,6 +25,8 @@ class FriendCell2: UITableViewCell {
         return iv
     }()
     
+    
+    //content------------
     lazy var nickNameLabel: BaseUILabel = {
         let label = BaseUILabel()
         label.font = UIFont.preferredFont(forTextStyle: .headline)
@@ -64,12 +67,20 @@ class FriendCell2: UITableViewCell {
         return stack
     }()
     
+    
+    
+    //------leftsideSharebutton
     lazy var shareButton: BaseUIButton = {
         let button = BaseUIButton()
         button.setImage(UIImage(named: "share"), for: .normal)
         return button
     }()
     
+    
+    
+    
+    
+    //wholeLayout----------
     lazy var contentStack: HStack = {
         let stack = HStack()
         stack.addArrangedSubview(leftStack)
@@ -79,6 +90,10 @@ class FriendCell2: UITableViewCell {
         stack.layoutMargins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         return stack
     }()
+    
+    
+    
+    
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

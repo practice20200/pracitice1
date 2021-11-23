@@ -23,8 +23,8 @@ class FriendsSortedListViewController : UITableViewController{
         ["mike Valley"],
         ["nik Valley"]
     ]
-    
-    
+
+//    let data = DataProviderList.makeDataForList()
     
     
     override func viewDidLoad() {
@@ -41,7 +41,7 @@ class FriendsSortedListViewController : UITableViewController{
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sortedFriends.count
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sortedFriends[section].count
     }
@@ -56,6 +56,28 @@ class FriendsSortedListViewController : UITableViewController{
         return cell!
     }
 
+    
+//-----in the case of using dataprovider----------------
+                    //    override func numberOfSections(in tableView: UITableView) -> Int {
+                    //        return data.count
+                    //    }
+                    //
+                    //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+                    //        let sectionData = data[section]
+                    //        return sectionData.1.count
+                    ////        return data[section].1.count
+                    //    }
+                    //
+                    //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+                    //        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FriendCell
+                    //
+                    //        let cellData = data[indexPath.section].1[indexPath.row]
+                    //        cell.label.text = cellData.nickName
+                    //
+                    //
+                    //        return cell
+                    //    }
+//-----in the case of using dataprovider------------------
     
     
     //------tablecelllayout

@@ -9,32 +9,7 @@ import UIKit
 
 class DataProvider {
     
-    static func photoDataProvider() -> [UIImage?] {
-        return [
-            UIImage(named: "photo1"),
-            UIImage(named: "photo2"),
-            UIImage(named: "photo3"),
-            UIImage(named: "photo1"),
-            UIImage(named: "photo2"),
-            UIImage(named: "photo3")
-        ]
-    }
-    
-    static func makePopularPlacedata() -> [Place] {
-        return[
-            Place(image: UIImage(named: "selection1"), name: "London"),
-            Place(image: UIImage(named: "selection1"), name: "Rome1"),
-            Place(image: UIImage(named: "selection1"), name: "Rome2"),
-            Place(image: UIImage(named: "selection1"), name: "Rome3"),
-            Place(image: UIImage(named: "selection1"), name: "Rome4"),
-            Place(image: UIImage(named: "selection1"), name: "Rome5"),
-            Place(image: UIImage(named: "selection1"), name: "Vancouver")
-        ]
-    }
-    
-    
-    
-    
+    //FriendsViewController
     static func makeData() -> [(String, [User])] {
         
         var aSection: [User] = []
@@ -102,6 +77,37 @@ class DataProvider {
         ]
         
     }
+
+    
+    
+    //HomeViewController>>>CollectionView
+    static func makePopularPlacedata() -> [Place] {
+        return[
+            Place(image: UIImage(named: "selection1"), name: "London"),
+            Place(image: UIImage(named: "selection1"), name: "Rome1"),
+            Place(image: UIImage(named: "selection1"), name: "Rome2"),
+            Place(image: UIImage(named: "selection1"), name: "Rome3"),
+            Place(image: UIImage(named: "selection1"), name: "Rome4"),
+            Place(image: UIImage(named: "selection1"), name: "Rome5"),
+            Place(image: UIImage(named: "selection1"), name: "Vancouver")
+        ]
+    }
+    
+    
+    //PlaceDetailedViewController>>>CollectionView
+    static func photoDataProvider() -> [UIImage?] {
+        return [
+            UIImage(named: "photo1"),
+            UIImage(named: "photo2"),
+            UIImage(named: "photo3"),
+            UIImage(named: "photo1"),
+            UIImage(named: "photo2"),
+            UIImage(named: "photo3")
+        ]
+    }
+    
+    
+   
 }
 
 
