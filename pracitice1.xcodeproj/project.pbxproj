@@ -29,9 +29,14 @@
 		B3AF7B1A273A3654006C2379 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF7B19273A3654006C2379 /* PlaceCell.swift */; };
 		B3B8BE8327488A9B006EBD57 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = B3B8BE8227488A9B006EBD57 /* Charts */; };
 		B3BB297F274CA97A007EA337 /* EmalAdress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BB297E274CA97A007EA337 /* EmalAdress.swift */; };
+		B3C2A9852757179500706848 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2A9842757179500706848 /* ToDoListViewController.swift */; };
+		B3C2A9872757186B00706848 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2A9862757186B00706848 /* ToDo.swift */; };
+		B3C2A989275718CE00706848 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2A988275718CE00706848 /* ToDoTableViewCell.swift */; };
+		B3C2A98B27571F4700706848 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3C2A98A27571F4700706848 /* GoogleService-Info.plist */; };
 		B3CFF1E0274604560087637E /* ScrollableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFF1DF274604560087637E /* ScrollableViewController.swift */; };
 		B3CFF1E2274608730087637E /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFF1E1274608730087637E /* PlaceDetailViewController.swift */; };
 		B3CFF1E6274610B10087637E /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFF1E5274610B10087637E /* PhotoCell.swift */; };
+		B3D1D9EB2751CD40002BDFC3 /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D1D9EA2751CD40002BDFC3 /* Serializer.swift */; };
 		B3D1DF2B2746F49900E78D70 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B3D1DF2A2746F49900E78D70 /* Lottie */; };
 		B3D1DF31274724A500E78D70 /* animation1.json in Resources */ = {isa = PBXBuildFile; fileRef = B3D1DF30274724A500E78D70 /* animation1.json */; };
 		B3D1DF33274724C300E78D70 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D1DF32274724C300E78D70 /* AnimationViewController.swift */; };
@@ -72,9 +77,14 @@
 		B3AF7B17273A2C13006C2379 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		B3AF7B19273A3654006C2379 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		B3BB297E274CA97A007EA337 /* EmalAdress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmalAdress.swift; sourceTree = "<group>"; };
+		B3C2A9842757179500706848 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
+		B3C2A9862757186B00706848 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		B3C2A988275718CE00706848 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
+		B3C2A98A27571F4700706848 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B3CFF1DF274604560087637E /* ScrollableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableViewController.swift; sourceTree = "<group>"; };
 		B3CFF1E1274608730087637E /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
 		B3CFF1E5274610B10087637E /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		B3D1D9EA2751CD40002BDFC3 /* Serializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
 		B3D1DF30274724A500E78D70 /* animation1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = animation1.json; path = ../../../Downloads/animation1.json; sourceTree = "<group>"; };
 		B3D1DF32274724C300E78D70 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		B3D1DF39274735E300E78D70 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +118,7 @@
 		B310BD272728FFFF005F81D5 = {
 			isa = PBXGroup;
 			children = (
+				B3C2A98A27571F4700706848 /* GoogleService-Info.plist */,
 				B310BD322728FFFF005F81D5 /* pracitice1 */,
 				B310BD312728FFFF005F81D5 /* Products */,
 			);
@@ -153,6 +164,7 @@
 				B3CFF1DF274604560087637E /* ScrollableViewController.swift */,
 				B3D1DF32274724C300E78D70 /* AnimationViewController.swift */,
 				B3D1DF39274735E300E78D70 /* ChartViewController.swift */,
+				B3C2A9842757179500706848 /* ToDoListViewController.swift */,
 			);
 			path = "ViewController ";
 			sourceTree = "<group>";
@@ -174,6 +186,8 @@
 				B3327BE8272CEDF300341DFB /* DataProvider.swift */,
 				B3A0562A273462F700ACD9B2 /* DataProviderList.swift */,
 				B3AF7B17273A2C13006C2379 /* Place.swift */,
+				B3D1D9EA2751CD40002BDFC3 /* Serializer.swift */,
+				B3C2A9862757186B00706848 /* ToDo.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -233,6 +247,7 @@
 				B3BB2980274CB413007EA337 /* FriendCells */,
 				B3AF7B19273A3654006C2379 /* PlaceCell.swift */,
 				B3CFF1E5274610B10087637E /* PhotoCell.swift */,
+				B3C2A988275718CE00706848 /* ToDoTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -323,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B310BD4027290003005F81D5 /* LaunchScreen.storyboard in Resources */,
+				B3C2A98B27571F4700706848 /* GoogleService-Info.plist in Resources */,
 				B3D1DF31274724A500E78D70 /* animation1.json in Resources */,
 				B310BD3D27290003005F81D5 /* Assets.xcassets in Resources */,
 			);
@@ -359,11 +375,15 @@
 				B3AF7B18273A2C13006C2379 /* Place.swift in Sources */,
 				B3A0562B273462F700ACD9B2 /* DataProviderList.swift in Sources */,
 				B31B9EA1272B94D1002592E6 /* Utils.swift in Sources */,
+				B3D1D9EB2751CD40002BDFC3 /* Serializer.swift in Sources */,
 				B3AEF319273CC39C0066CA20 /* ImageViewerViewController.swift in Sources */,
 				B3327BEB272CF34200341DFB /* FriendCell2.swift in Sources */,
 				B3CFF1E6274610B10087637E /* PhotoCell.swift in Sources */,
 				B3FD926D27326181000916A6 /* LocalDataManager.swift in Sources */,
 				B3FD9263273236B7000916A6 /* LoginFailViewController.swift in Sources */,
+				B3C2A9872757186B00706848 /* ToDo.swift in Sources */,
+				B3C2A989275718CE00706848 /* ToDoTableViewCell.swift in Sources */,
+				B3C2A9852757179500706848 /* ToDoListViewController.swift in Sources */,
 				B3FD9267273236F9000916A6 /* FriendsSortedListViewController.swift in Sources */,
 				B3FD925B273235A1000916A6 /* ProfileItemView.swift in Sources */,
 				B31B9E9C272B6108002592E6 /* LoginViewController.swift in Sources */,

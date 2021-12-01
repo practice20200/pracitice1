@@ -33,7 +33,29 @@ class AnimationViewController: UIViewController {
         ])
         
         animationView.play()
+        checkDifferentScenarios()
     }
 
-
+    func checkDifferentScenarios(){
+        let userJson = Serializer.rawUserJson()
+        let arrayJson = Serializer.rawUserArrayJson()
+        
+        
+        if let user = Serializer.deserialize(jsonString: userJson){
+            print(user.firstName)
+            print(user.lastName)
+            print(user.country)
+        }
+        
+        let userArray = Serializer.deserializeArray(jsonString: arrayJson)
+        print("count is \(userArray.count)")
+        print(userArray[0].firstName)
+        print(userArray[0].lastName)
+        print(userArray[0].country)
+        
+        let user = NewUser(firstName: "Joe", lastName: "Doe", country: "USA")
+        if let jsonValue = Serializer.serialize(user: user){
+            print(jsonValue)
+        }
+    }
 }

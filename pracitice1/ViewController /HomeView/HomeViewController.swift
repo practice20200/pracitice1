@@ -82,7 +82,7 @@ class HomeViewController : UIViewController, UICollectionViewDelegate,
         return cv
         
     }()
-    
+     
     lazy var selectionsLabel : BaseUILabel = {
         let title = BaseUILabel()
         title.text = "Popular Places"
