@@ -1,8 +1,11 @@
 
 import UIKit
 import Elements
+import Firebase
 
 class SignUpViewController: UIViewController {
+
+    var handle: AuthStateDidChangeListenerHandle?
     
     //logostack-------
     lazy var logo: BaseUIImageView = {
@@ -118,10 +121,55 @@ class SignUpViewController: UIViewController {
         ])
     }
     
-    @objc func signUpHandler() {
-//        let profileVC = ProfileViewController()
-//        self.navigationController?.pushViewController(profileVC, animated: true)
-        let vc = TabBarViewController()
-        AppRouter.navigate(to: vc)
-    }
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            
+            handle = Auth.auth().addStateDidChangeListener({ _, user in
+                if user != nil {
+                    let vc = TabBarViewController()
+                    AppRouter.navigate(to: vc)
+                }
+            })
+            
+        }
+        
+        override func viewDidDisappear(_ animated: Bool) {
+            super.viewDidDisappear(animated)
+            guard let handle = handle else { return }
+            Auth.auth().removeStateDidChangeListener(handle)
+        }
+        
+        @objc func signUpHandler() {
+
+            if !(emailTF.text?.isEmpty ?? true) &&
+                    !(usernameTF.text?.isEmpty ?? true) &&
+                    !(passTF.text?.isEmpty ?? true) {
+                
+    //            LocalDataManager.isOnboarded(flag: true)
+    //            LocalDataManager.setEmail(email: emailTF.text ?? "")
+    //            LocalDataManager.setUsername(userName: usernameTF.text ?? "")
+    //
+    //            let vc = TabBarViewController()
+    //            AppRouter.navigate(to: vc)
+                
+                let email = emailTF.text ?? ""
+                let password = passTF.text ?? ""
+                
+                Auth.auth().createUser(withEmail: email, password: password) { _, error in
+                    
+                    if error == nil {
+                        // creating user is completed sucessfully
+                        // the next step: to sign in to the application using auth feature of firebase
+                        Auth.auth().signIn(withEmail: email, password: password)
+                    } else {
+                        let alertVC = UIAlertController(title: "Error in sign up", message: "couldn't create user", preferredStyle: .alert)
+                        let action = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                        alertVC.addAction(action)
+                        self.navigationController?.present(alertVC, animated: true, completion: nil)
+                    }
+                }
+                
+            }
+            
+        }
 }

@@ -21,11 +21,14 @@ class TabBarViewController: UITabBarController{
         let profileVC = ProfileViewController()
         profileVC.tabBarItem = UITabBarItem(title: "profile", image: UIImage(named: "ProfileTab"), tag: 2)
         
+        let toDoVC = ToDoListViewController()
+                toDoVC.tabBarItem = UITabBarItem(title: "TODO", image: UIImage(named: "homeTab"), tag: 3)
+        
         tabBar.backgroundColor = UIColor(hexString: "#F9F9F9")
         tabBar.tintColor = UIColor(hexString: "#5BCFC2")
         
         
-        viewControllers = [homeVC, friendVC, profileVC]
+        viewControllers = [homeVC, friendVC, profileVC, toDoVC]
         
     }
     

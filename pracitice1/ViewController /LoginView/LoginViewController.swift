@@ -2,9 +2,12 @@
 
 import UIKit
 import Elements
+import Firebase
+
 
 class LoginViewController: UIViewController {
     
+    var handle: AuthStateDidChangeListenerHandle?
     //------logo Stack
     lazy var logo: BaseUIImageView = {
         let iv = BaseUIImageView()
@@ -124,6 +127,8 @@ class LoginViewController: UIViewController {
         button.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
         button.widthAnchor.constraint(equalToConstant: 140).isActive = true
         button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.addTarget(self, action: #selector(homeHandler), for: .touchUpInside)
+
         button.layer.cornerRadius = 25
         return button
     }()
@@ -209,29 +214,78 @@ class LoginViewController: UIViewController {
         self.navigationController?.pushViewController(signUPVC, animated: true)
     }
     
+    @objc func homeHandler(){
+        let signUPVC = TabBarViewController()
+        self.navigationController?.pushViewController(signUPVC, animated: true)
+    }
     
-    let validEmail = "1234@yahoo.com"
-    let validPassword = "1234"
+    
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            handle = Auth.auth().addStateDidChangeListener({ _, user in
+                if user != nil {
+                    let vc = TabBarViewController()
+                    AppRouter.navigate(to: vc)
+                }
+            })
+        }
+        
+        override func viewDidDisappear(_ animated: Bool) {
+            super.viewDidDisappear(animated)
+            guard let handle = handle else { return }
+            Auth.auth().removeStateDidChangeListener(handle)
+        }
+    
+    
+    
+    let validEmail = "123456@yahoo.com"
+    let validPassword = "123456"
     
     @objc func loginHandler() {
         
-        var inputEmail = emailTF.text
-        var inputPassword = passTF.text
         
-        if inputEmail == validEmail{
+        if !(emailTF.text?.isEmpty ?? true) &&
+                        !(passTF.text?.isEmpty ?? true) {
+                    
+        //            LocalDataManager.isOnboarded(flag: true)
+        //            LocalDataManager.setEmail(email: emailTF.text ?? "")
+        //
+        //            let vc = TabBarViewController()
+        //            AppRouter.navigate(to: vc)
+                    
+                    let email = emailTF.text ?? ""
+                    let password = passTF.text ?? ""
+                    
+                    Auth.auth().signIn(withEmail: email, password: password) { user, error in
+                        if let error = error, user == nil {
+                            let alert = UIAlertController(title: "Sign in failed", message: error.localizedDescription, preferredStyle: .alert)
+                            
+                            alert.addAction(UIAlertAction(title: "OK", style: .default))
+                            self.present(alert, animated: true, completion: nil)
+                        }
+                    }
+                    
+                }
+        
+        
+        
+       // var inputEmail = emailTF.text
+     //   var inputPassword = passTF.text
+        
+      //  if inputEmail == validEmail{
             
-            if inputPassword == validPassword{
-                let vc = TabBarViewController()
-                self.navigationController?.pushViewController(vc, animated: true)
-            }else{
-                let vc = LoginFailViewController()
-                self.navigationController?.pushViewController(vc, animated: true)
-            }
+           // if inputPassword == validPassword{
+          //     let vc = TabBarViewController()
+           //     self.navigationController?.pushViewController(vc, animated: true)
+          //  }else{
+           ////     let vc = LoginFailViewController()
+             //   self.navigationController?.pushViewController(vc, animated: true)
+          //  }
             
-        }else{
-            let vc = LoginFailViewController()
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+      //  }else{
+          //  let vc = LoginFailViewController()
+           // self.navigationController?.pushViewController(vc, animated: true)
+       // }
         
         
         
