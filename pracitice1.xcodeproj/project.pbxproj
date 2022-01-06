@@ -36,7 +36,6 @@
 		B3BA398E276AF4E200711BD1 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = B3BA398D276AF4E200711BD1 /* FirebaseMessaging */; };
 		B3BA3990276AF4E200711BD1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B3BA398F276AF4E200711BD1 /* FirebaseStorage */; };
 		B3BB297F274CA97A007EA337 /* EmalAdress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BB297E274CA97A007EA337 /* EmalAdress.swift */; };
-		B3C2A9852757179500706848 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2A9842757179500706848 /* ToDoListViewController.swift */; };
 		B3C2A9872757186B00706848 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2A9862757186B00706848 /* ToDo.swift */; };
 		B3C2A989275718CE00706848 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2A988275718CE00706848 /* ToDoTableViewCell.swift */; };
 		B3C2A98B27571F4700706848 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3C2A98A27571F4700706848 /* GoogleService-Info.plist */; };
@@ -47,6 +46,7 @@
 		B3D1DF31274724A500E78D70 /* animation1.json in Resources */ = {isa = PBXBuildFile; fileRef = B3D1DF30274724A500E78D70 /* animation1.json */; };
 		B3D1DF33274724C300E78D70 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D1DF32274724C300E78D70 /* AnimationViewController.swift */; };
 		B3D1DF3A274735E300E78D70 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D1DF39274735E300E78D70 /* ChartViewController.swift */; };
+		B3DF254D27876E4A00047210 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DF254C27876E4A00047210 /* ToDoListViewController.swift */; };
 		B3FD92582732357B000916A6 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FD92572732357B000916A6 /* AppRouter.swift */; };
 		B3FD925B273235A1000916A6 /* ProfileItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FD925A273235A1000916A6 /* ProfileItemView.swift */; };
 		B3FD925D2732360B000916A6 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FD925C2732360B000916A6 /* TabBarViewController.swift */; };
@@ -83,7 +83,6 @@
 		B3AF7B17273A2C13006C2379 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		B3AF7B19273A3654006C2379 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		B3BB297E274CA97A007EA337 /* EmalAdress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmalAdress.swift; sourceTree = "<group>"; };
-		B3C2A9842757179500706848 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		B3C2A9862757186B00706848 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		B3C2A988275718CE00706848 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 		B3C2A98A27571F4700706848 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -94,6 +93,7 @@
 		B3D1DF30274724A500E78D70 /* animation1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = animation1.json; path = ../../../Downloads/animation1.json; sourceTree = "<group>"; };
 		B3D1DF32274724C300E78D70 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		B3D1DF39274735E300E78D70 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		B3DF254C27876E4A00047210 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		B3FD92572732357B000916A6 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		B3FD925A273235A1000916A6 /* ProfileItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItemView.swift; sourceTree = "<group>"; };
 		B3FD925C2732360B000916A6 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 				B3CFF1DF274604560087637E /* ScrollableViewController.swift */,
 				B3D1DF32274724C300E78D70 /* AnimationViewController.swift */,
 				B3D1DF39274735E300E78D70 /* ChartViewController.swift */,
-				B3C2A9842757179500706848 /* ToDoListViewController.swift */,
+				B3DF254C27876E4A00047210 /* ToDoListViewController.swift */,
 			);
 			path = "ViewController ";
 			sourceTree = "<group>";
@@ -370,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3DF254D27876E4A00047210 /* ToDoListViewController.swift in Sources */,
 				B310BD482729012E005F81D5 /* WelcomeViewController.swift in Sources */,
 				B310BD342728FFFF005F81D5 /* AppDelegate.swift in Sources */,
 				B3FD925D2732360B000916A6 /* TabBarViewController.swift in Sources */,
@@ -402,7 +403,6 @@
 				B3FD9263273236B7000916A6 /* LoginFailViewController.swift in Sources */,
 				B3C2A9872757186B00706848 /* ToDo.swift in Sources */,
 				B3C2A989275718CE00706848 /* ToDoTableViewCell.swift in Sources */,
-				B3C2A9852757179500706848 /* ToDoListViewController.swift in Sources */,
 				B3FD9267273236F9000916A6 /* FriendsSortedListViewController.swift in Sources */,
 				B3FD925B273235A1000916A6 /* ProfileItemView.swift in Sources */,
 				B31B9E9C272B6108002592E6 /* LoginViewController.swift in Sources */,

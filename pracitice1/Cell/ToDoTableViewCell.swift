@@ -27,7 +27,7 @@ class ToDoTableViewCell: UITableViewCell {
     lazy var contentStack: HStack = {
         let stack = HStack()
         stack.addArrangedSubview(titleLabel)
-        stack.addArrangedSubview(EmptyView())
+//        stack.addArrangedSubview(EmptyView())
         stack.addArrangedSubview(checkState)
         stack.alignment = .center
         return stack
